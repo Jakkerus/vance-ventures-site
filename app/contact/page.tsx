@@ -1,8 +1,18 @@
 "use client";
 
+import { useState } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
+
 export default function Contact() {
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [loading, setLoading] = useState(false);
+  const [token, setToken] = useState<string | null>(null);
+
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    setLoading(true);
+    setStatus("idle");
 
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -15,6 +25,7 @@ export default function Contact() {
       subject: data.get("subject"),
       message: data.get("message"),
       company_website: data.get("company_website"),
+      turnstileToken: token,
     };
 
     try {
@@ -28,32 +39,21 @@ export default function Contact() {
 
       const result = await response.json();
 
+      if (!token) {
+        setStatus("error");
+        return;
+      }
+
       if (result.ok) {
-        alert("Inquiry sent successfully.");
+        setStatus("success");
         form.reset();
-
-        const select = form.querySelector(
-          'select[name="inquiryType"]'
-        ) as HTMLSelectElement | null;
-
-        if (select) {
-          select.classList.add("select-placeholder");
-        }
       } else {
-        alert(result.error || "Something went wrong.");
+        setStatus("error");
       }
     } catch {
-      alert("Something went wrong.");
-    }
-  }
-
-  function handleInquiryTypeChange(
-    e: React.ChangeEvent<HTMLSelectElement>
-  ) {
-    if (e.currentTarget.value === "") {
-      e.currentTarget.classList.add("select-placeholder");
-    } else {
-      e.currentTarget.classList.remove("select-placeholder");
+      setStatus("error");
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -102,11 +102,7 @@ export default function Contact() {
               autoComplete="off"
             />
 
-            <select
-              name="inquiryType"
-              defaultValue=""
-              required
-            >
+            <select name="inquiryType" defaultValue="" required>
               <option value="" disabled hidden>
                 Inquiry Type
               </option>
@@ -116,24 +112,40 @@ export default function Contact() {
               <option value="investment">Investment Inquiry</option>
             </select>
 
-            <input name="name" type="text" placeholder="Name" />
+            <input name="name" type="text" placeholder="Name" required />
             <input
               name="company"
               type="text"
               placeholder="Company or Organization"
             />
-            <input name="email" type="email" placeholder="Email" />
-            <input name="subject" type="text" placeholder="Subject" />
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="subject" type="text" placeholder="Subject" required />
             <textarea
               name="message"
               placeholder="Briefly describe your inquiry"
               rows={6}
+              required
             />
 
-            <button type="submit" className="button button-dark">
-              Send Inquiry
+            <Turnstile
+              siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+              onSuccess={(token) => setToken(token)}
+            />
+
+            <button type="submit" className="button button-dark" disabled={loading}>
+              {loading ? "Sending..." : "Send Inquiry"}
             </button>
           </form>
+
+          {status === "success" && (
+            <p className="form-success">Inquiry sent successfully.</p>
+          )}
+
+          {status === "error" && (
+            <p className="form-error">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </div>
       </section>
     </main>
