@@ -37,8 +37,34 @@ export default function RootLayout({
 
         {children}
         <CookieBanner />
-        <footer>
-          <p>© 2026 Vance Ventures. All rights reserved.</p>
+        <footer className="site-footer">
+          <div className="site-footer-inner">
+            <div className="footer-brand">
+              <p style={{ fontWeight: 700 }}>VANCE VENTURES</p>
+              <p>Building long term value through ownership and execution.</p>
+            </div>
+
+            <div className="footer-column">
+              <p className="footer-heading">Navigation</p>
+                <div className="footer-links">
+                  <Link href="/">Home</Link>
+                  <Link href="/about">About</Link>
+                  <Link href="/portfolio">Portfolio</Link>
+                  <Link href="/contact">Contact</Link>
+                  <Link href="/privacy">Privacy</Link>
+                </div>
+            </div>
+
+            <div className="footer-column">
+              <p className="footer-heading">Contact</p>
+              <p>info@vance-ventures.com</p>
+              <p>Texas, United States</p>
+            </div>
+          </div>
+
+          <div className="site-footer-bottom">
+            <p>© 2026 Vance Ventures. All rights reserved.</p>
+          </div>
         </footer>
       </body>
     </html>
