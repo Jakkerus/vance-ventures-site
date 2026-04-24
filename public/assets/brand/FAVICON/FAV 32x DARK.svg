@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Dimensions" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9fafb;
+      }
+
+      .cls-2 {
+        fill: #6b7c99;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="23.94 4.66 25.26 5.26 24.48 6.91 20.53 15.27 20.5 15.33 15.53 25.84 4.56 2.56 4.56 2.56 .36 2.56 12.98 31.37 18.15 31.37 28.67 6.91 30.01 7.52 31.64 .63 23.94 4.66"/>
+  <polygon class="cls-2" points="15.51 17.5 18.79 12.35 20.61 11.49 15.51 22.27 10.42 11.49 12.24 12.35 15.51 17.5"/>
+</svg>

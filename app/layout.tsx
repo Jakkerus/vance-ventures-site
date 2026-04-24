@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import CookieBanner from "@/components/CookieBanner";
 import Reveal from "@/components/Reveal";
+import Header from "@/components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,7 +14,12 @@ export const metadata: Metadata = {
   title: "Vance Ventures",
   description: "Building long term value through ownership and execution.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/assets/brand/fav-32.svg", type: "image/svg+xml" },
+      { url: "/assets/brand/fav-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/brand/fav-16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/assets/brand/apple-icon.png",
   },
 };
 
@@ -29,21 +35,7 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        <header>
-          <nav className="site-nav" aria-label="Main navigation">
-            <Link href="/" className="brand" aria-label="Vance Ventures — home">
-              <span className="brand-line">Vance</span>
-              <span className="brand-line">Ventures</span>
-            </Link>
-
-            <div className="nav-links">
-              <Link href="/#about">About</Link>
-              <Link href="/#portfolio">Portfolio</Link>
-              <Link href="/privacy">Privacy</Link>
-              <Link href="/#contact" className="nav-cta">Contact</Link>
-            </div>
-          </nav>
-        </header>
+        <Header />
 
         {children}
 
@@ -53,10 +45,21 @@ export default function RootLayout({
         <footer className="site-footer" aria-label="Site footer">
           <div className="site-footer-inner">
             <div className="footer-brand">
-              <div className="footer-brand-name" aria-label="Vance Ventures">
-                <span>Vance</span>
-                <span>Ventures</span>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/brand/monogram-circle-dark.svg"
+                alt=""
+                aria-hidden="true"
+                height="36"
+                style={{ width: "auto", display: "block", marginBottom: "0.75rem" }}
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/brand/wordmark-dark.svg"
+                alt="Vance Ventures"
+                height="28"
+                style={{ width: "auto", display: "block" }}
+              />
               <p>Building long term value through ownership and execution.</p>
             </div>
 
