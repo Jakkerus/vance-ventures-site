@@ -1,15 +1,21 @@
 "use client";
 
-import { useState } from "react";
-import { Turnstile } from "@marsidev/react-turnstile";
+import { useRef, useState } from "react";
+import { Turnstile, TurnstileInstance } from "@marsidev/react-turnstile";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [loading, setLoading] = useState(false);
   const [token, setToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    if (!token) {
+      setStatus("error");
+      return;
+    }
 
     setLoading(true);
     setStatus("idle");
@@ -39,11 +45,6 @@ export default function Contact() {
 
       const result = await response.json();
 
-      if (!token) {
-        setStatus("error");
-        return;
-      }
-
       if (result.ok) {
         setStatus("success");
         form.reset();
@@ -54,6 +55,8 @@ export default function Contact() {
       setStatus("error");
     } finally {
       setLoading(false);
+      setToken(null);
+      turnstileRef.current?.reset();
     }
   }
 
@@ -128,8 +131,10 @@ export default function Contact() {
             />
 
             <Turnstile
+              ref={turnstileRef}
               siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
               onSuccess={(token) => setToken(token)}
+              onExpire={() => setToken(null)}
             />
 
             <button type="submit" className="button button-dark" disabled={loading}>
