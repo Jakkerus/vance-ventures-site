@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Portfolio() {
   return (
     <main>
@@ -12,9 +14,11 @@ export default function Portfolio() {
 
       <section className="feature-section">
         <div className="feature-image">
-          <img
+          <Image
             src="/assets/images/dbat-lubbock.jpg"
             alt="D-BAT Lubbock"
+            width={1536}
+            height={1024}
           />
         </div>
 

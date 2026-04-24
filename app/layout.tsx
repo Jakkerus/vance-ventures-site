@@ -40,7 +40,7 @@ export default function RootLayout({
         <footer className="site-footer">
           <div className="site-footer-inner">
             <div className="footer-brand">
-              <p style={{ fontWeight: 700 }}>VANCE VENTURES</p>
+              <p>VANCE VENTURES</p>
               <p>Building long term value through ownership and execution.</p>
             </div>
 

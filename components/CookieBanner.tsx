@@ -9,10 +9,7 @@ export default function CookieBanner() {
   useEffect(() => {
     const consent = localStorage.getItem("vv_cookie_consent");
     if (!consent) {
-      // delay to avoid React warning
-      setTimeout(() => {
-        setVisible(true);
-      }, 0);
+      setVisible(true);
     }
   }, []);
 

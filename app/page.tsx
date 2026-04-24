@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -69,9 +70,11 @@ export default function Home() {
         </div>
 
         <div className="feature-image">
-          <img
+          <Image
             src="/assets/images/dbat-lubbock.jpg"
             alt="D-BAT Lubbock"
+            width={1536}
+            height={1024}
           />
         </div>
       </section>
