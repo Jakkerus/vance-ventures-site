@@ -1,10 +1,9 @@
 export default function Privacy() {
   return (
-    <main>
-      <section className="page-hero">
+    <main id="main-content">
+      <section className="page-hero" aria-labelledby="privacy-heading">
         <div className="container">
-          <p className="eyebrow">Privacy</p>
-          <h1>Privacy Policy</h1>
+          <h1 id="privacy-heading">Privacy Policy</h1>
           <p className="page-hero-text">
             Your privacy is important to us. This page explains what information
             we collect, how we use it, and how we protect it.
@@ -12,7 +11,7 @@ export default function Privacy() {
         </div>
       </section>
 
-      <section className="privacy-wrapper">
+      <section className="privacy-wrapper" aria-label="Privacy policy content">
         <div className="container">
           <div className="privacy-card">
             <div className="privacy-section">
@@ -70,7 +69,11 @@ export default function Privacy() {
               <h2>Contact</h2>
               <p>
                 If you have questions about this Privacy Policy, please contact
-                us at info@vance-ventures.com.
+                us at{" "}
+                <a href="mailto:info@vance-ventures.com">
+                  info@vance-ventures.com
+                </a>
+                .
               </p>
             </div>
           </div>
