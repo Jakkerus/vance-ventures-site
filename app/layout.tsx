@@ -23,36 +23,43 @@ export default function RootLayout({
       <body className={inter.className}>
         <header>
           <nav className="site-nav">
-            <div className="brand">Vance Ventures</div>
+            <Link href="/" className="brand">
+              <span className="brand-line">Vance</span>
+              <span className="brand-line">Ventures</span>
+            </Link>
 
             <div className="nav-links">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
               <Link href="/portfolio">Portfolio</Link>
-              <Link href="/contact">Contact</Link>
               <Link href="/privacy">Privacy</Link>
+              <Link href="/contact" className="nav-cta">Contact</Link>
             </div>
           </nav>
         </header>
 
         {children}
         <CookieBanner />
+
         <footer className="site-footer">
           <div className="site-footer-inner">
             <div className="footer-brand">
-              <p>VANCE VENTURES</p>
+              <div className="footer-brand-name">
+                <span>Vance</span>
+                <span>Ventures</span>
+              </div>
               <p>Building long term value through ownership and execution.</p>
             </div>
 
             <div className="footer-column">
               <p className="footer-heading">Navigation</p>
-                <div className="footer-links">
-                  <Link href="/">Home</Link>
-                  <Link href="/about">About</Link>
-                  <Link href="/portfolio">Portfolio</Link>
-                  <Link href="/contact">Contact</Link>
-                  <Link href="/privacy">Privacy</Link>
-                </div>
+              <div className="footer-links">
+                <Link href="/">Home</Link>
+                <Link href="/about">About</Link>
+                <Link href="/portfolio">Portfolio</Link>
+                <Link href="/contact">Contact</Link>
+                <Link href="/privacy">Privacy</Link>
+              </div>
             </div>
 
             <div className="footer-column">
