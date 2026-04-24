@@ -110,14 +110,15 @@ export async function POST(req: Request) {
       }
     );
 
-const verifyData = await verifyRes.json();
+    const verifyData = await verifyRes.json();
 
-if (!verifyData.success) {
-  return NextResponse.json(
-    { ok: false, error: "Failed verification." },
-    { status: 400 }
-  );
-}
+    if (!verifyData.success) {
+      console.error("Turnstile verification failed:", verifyData["error-codes"]);
+      return NextResponse.json(
+        { ok: false, error: "Failed verification." },
+        { status: 400 }
+      );
+    }
 
     // ===== Send Email via SES =====
     const command = new SendEmailCommand({
@@ -148,18 +149,21 @@ ${message}
       },
     });
 
-    await ses.send(command);
+    try {
+      await ses.send(command);
+    } catch (sesError) {
+      console.error("SES send failed:", sesError);
+      return NextResponse.json(
+        { ok: false, error: "Something went wrong." },
+        { status: 500 }
+      );
+    }
 
-    console.log("Email sent successfully:", {
-      inquiryType,
-      name,
-      email,
-      ip,
-    });
+    console.log("Email sent successfully:", { inquiryType, name, email, ip });
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error("Contact form error:", error);
+    console.error("Unexpected contact form error:", error);
 
     return NextResponse.json(
       { ok: false, error: "Something went wrong." },

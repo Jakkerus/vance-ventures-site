@@ -242,6 +242,7 @@ main {
 
 .feature-image img {
   width: 100%;
+  height: auto;
   border-radius: 20px;
   display: block;
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
