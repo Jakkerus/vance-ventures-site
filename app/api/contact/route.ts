@@ -96,7 +96,6 @@ export async function POST(req: Request) {
     }
 
     // ===== Turnstile Verification =====
-    console.log("[debug] TURNSTILE_SECRET_KEY present:", !!process.env.TURNSTILE_SECRET_KEY, "| length:", process.env.TURNSTILE_SECRET_KEY?.length ?? "undefined");
     const verifyRes = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
       {
