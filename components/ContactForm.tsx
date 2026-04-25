@@ -124,7 +124,6 @@ export default function ContactForm() {
           siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
           onSuccess={(t) => setToken(t)}
           onExpire={() => setToken(null)}
-          theme="auto"
         />
 
         <button type="submit" className="button button-dark" disabled={loading}>

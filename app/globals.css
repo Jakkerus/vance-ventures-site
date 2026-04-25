@@ -623,6 +623,7 @@ header.scrolled .nav-toggle {
 .about-section {
   background: var(--surface);
   padding: 4.5rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .about-cards {
@@ -671,28 +672,150 @@ header.scrolled .nav-toggle {
   line-height: 1.6;
 }
 
-/* === APPROACH === */
+/* === HOW WE OPERATE === */
 
-.approach-section {
+.operate-section {
   background: var(--approach-bg);
   padding: 4.5rem 0;
 }
 
-.approach-section h2 {
+.operate-section h2 {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 800;
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   letter-spacing: -0.03em;
   color: white;
   max-width: 580px;
   line-height: 1.1;
 }
 
-.approach-section p {
-  color: rgba(255, 255, 255, 0.7);
+.operate-intro {
+  margin-bottom: 2.5rem;
+}
+
+.operate-intro p {
+  color: rgba(255, 255, 255, 0.68);
   font-size: 1rem;
   max-width: 520px;
   margin: 0;
+}
+
+.operate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.operate-item {
+  padding: 1.5rem;
+  background: var(--approach-bg);
+}
+
+.operate-item h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin: 0 0 0.5rem;
+}
+
+.operate-item p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* === WHAT WE LOOK FOR === */
+
+.criteria-section {
+  background: var(--bg);
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.criteria-inner {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.criteria-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.criteria-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.criteria-list li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.criteria-list li::before {
+  content: "—";
+  color: var(--steel);
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.focus-block {
+  position: sticky;
+  top: 88px;
+}
+
+.focus-block h4 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.125rem;
+}
+
+.focus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.focus-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  color: var(--fg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.55;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.focus-list li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.focus-list li::before {
+  content: "→";
+  color: var(--steel);
+  font-size: 0.75rem;
+  flex-shrink: 0;
 }
 
 /* === PORTFOLIO === */
@@ -1201,11 +1324,25 @@ header.scrolled .nav-toggle {
   }
 
   .about-section,
-  .approach-section,
+  .operate-section,
+  .criteria-section,
   .portfolio-section,
   .contact-section,
   .privacy-wrapper {
     padding: 3rem 0;
+  }
+
+  .operate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .criteria-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .focus-block {
+    position: static;
   }
 
   .portfolio-feature {

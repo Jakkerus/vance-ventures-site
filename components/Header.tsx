@@ -75,7 +75,7 @@ export default function Header() {
           <img
             src={wordmarkSrc}
             alt="Vance Ventures"
-            height="34"
+            height="42"
             style={{ width: "auto", display: "block" }}
           />
         </Link>

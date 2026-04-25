@@ -52,19 +52,10 @@ export default function RootLayout({
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/assets/brand/monogram-circle-dark.svg"
-                alt=""
-                aria-hidden="true"
-                height="36"
-                style={{ width: "auto", display: "block", marginBottom: "0.75rem" }}
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/brand/wordmark-dark.svg"
                 alt="Vance Ventures"
-                height="28"
+                height="40"
                 style={{ width: "auto", display: "block" }}
               />
-              <p>Building long term value through ownership and execution.</p>
             </div>
 
             <div className="footer-column">
