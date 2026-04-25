@@ -183,13 +183,13 @@ header.scrolled {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .nav-links a {
   color: rgba(255, 255, 255, 0.88);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -356,7 +356,7 @@ header.scrolled .nav-toggle {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 88vh;
+  min-height: 84vh;
   display: flex;
   align-items: center;
 }
@@ -398,7 +398,7 @@ header.scrolled .nav-toggle {
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
-  padding: 6rem 1.5rem 4rem;
+  padding: 6rem 1.5rem 3rem;
   color: white;
 }
 
@@ -572,8 +572,8 @@ header.scrolled .nav-toggle {
   border-bottom: 1px solid var(--border);
   position: relative;
   z-index: 1;
-  margin-top: -2rem;
-  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.1);
+  margin-top: -3rem;
+  box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.12);
 }
 
 .pillars-grid {
@@ -634,8 +634,8 @@ header.scrolled .nav-toggle {
 
 .info-card {
   background: var(--surface-alt);
-  border-radius: 8px;
-  padding: 1.5rem;
+  border-radius: 6px;
+  padding: 1.25rem;
   border: 1px solid var(--border);
   transition: box-shadow 0.2s;
   box-shadow: var(--shadow-card);
@@ -658,18 +658,18 @@ header.scrolled .nav-toggle {
 }
 
 .info-card h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin: 0 0 0.35rem;
   color: var(--fg);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 .info-card p {
   color: var(--muted);
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 /* === HOW WE OPERATE === */
@@ -711,7 +711,7 @@ header.scrolled .nav-toggle {
 }
 
 .operate-item {
-  padding: 1.5rem;
+  padding: 1.25rem;
   background: var(--approach-bg);
 }
 
@@ -1133,7 +1133,7 @@ header.scrolled .nav-toggle {
 .site-footer-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem 2rem;
+  padding: 3.5rem 1.5rem 2.5rem;
   display: grid;
   grid-template-columns: 1.4fr 0.9fr 1fr;
   gap: 2.5rem;
@@ -1143,6 +1143,7 @@ header.scrolled .nav-toggle {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0.5rem 0;
 }
 
 .footer-brand p {

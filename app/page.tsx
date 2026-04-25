@@ -6,7 +6,6 @@ import {
   TrendingUpIcon,
   MapPinIcon,
   CpuIcon,
-  StarIcon,
   MailIcon,
 } from "@/components/Icons";
 import ContactForm from "@/components/ContactForm";
@@ -21,9 +20,8 @@ export default function Home() {
         <div className="hero-content">
           <h1>Building long term value through ownership and execution.</h1>
           <p className="hero-text">
-            Vance Ventures is a Texas-based private holding company. We acquire
-            and operate businesses directly — with hands-on involvement, clear
-            accountability, and a long-term hold strategy.
+            We acquire and operate businesses with long-term potential.
+            Direct ownership. Hands-on execution. No passive positions.
           </p>
           <div className="hero-actions">
             <Link href="#portfolio" className="button button-primary">
@@ -85,8 +83,8 @@ export default function Home() {
             </h2>
             <p>
               Vance Ventures is not a fund, an accelerator, or a passive
-              investor. We are operators — acquiring businesses, building
-              operating infrastructure, and holding assets for the long term.
+              investor. We are operators — we acquire businesses, build
+              operating infrastructure, and hold assets for the long term.
             </p>
           </div>
 
@@ -98,9 +96,9 @@ export default function Home() {
               <h3>Who We Are</h3>
               <p>
                 A Texas-based private holding company with direct ownership and
-                operational involvement in each portfolio business. We run lean,
-                build systems, and hold assets as long as they meet our
-                performance and strategic criteria.
+                operational involvement in each portfolio business. We build
+                systems, run lean, and hold assets as long as they meet our
+                performance criteria.
               </p>
             </div>
 
@@ -110,10 +108,9 @@ export default function Home() {
               </div>
               <h3>How We Think</h3>
               <p>
-                We prioritize operational control over scale, unit economics
-                over growth rate, and sustainable cash flow over headline
-                returns. Every decision is evaluated against its long-term
-                impact on business quality — not its short-term optics.
+                Operational control over scale. Unit economics over growth rate.
+                Sustainable cash flow over headline returns. Every decision
+                is evaluated against its long-term impact on business quality.
               </p>
             </div>
           </div>
@@ -147,26 +144,26 @@ export default function Home() {
               <h4>Systems Before Scale</h4>
               <p>
                 Before expanding a unit or adding a location, we build the
-                infrastructure required to support that growth without
-                sacrificing quality or margins.
+                infrastructure required to support growth without sacrificing
+                quality or margins.
               </p>
             </div>
 
             <div className="operate-item">
               <h4>Conservative Capital Deployment</h4>
               <p>
-                Leverage is used selectively, at levels the business can
-                service from existing cash flow. We do not rely on projected
-                growth to justify current commitments.
+                Leverage is used selectively, at levels the business can service
+                from existing cash flow. We do not rely on projected growth to
+                justify current commitments.
               </p>
             </div>
 
             <div className="operate-item">
               <h4>Defined Performance Standards</h4>
               <p>
-                Each business operates against defined KPIs — staffing ratios,
-                margin targets, utilization rates, and retention benchmarks —
-                reviewed on a consistent cadence.
+                Each business operates against defined KPIs — margin targets,
+                utilization rates, and retention benchmarks — reviewed on a
+                consistent cadence.
               </p>
             </div>
           </div>
@@ -200,10 +197,10 @@ export default function Home() {
             <div className="focus-block" data-reveal data-delay="1">
               <h4>Areas of Focus</h4>
               <ul className="focus-list" aria-label="Areas of focus">
-                <li>Youth and amateur sports — facilities, instruction, and franchise systems</li>
-                <li>Service businesses with recurring revenue and strong local retention</li>
-                <li>Franchise concepts with proven unit economics and regional expansion potential</li>
-                <li>Businesses operating in Texas markets we know and understand</li>
+                <li>Service-based businesses with recurring or durable revenue</li>
+                <li>Franchise systems with strong unit economics</li>
+                <li>Businesses with operational inefficiencies that can be improved</li>
+                <li>Opportunities with clear paths to scale through execution</li>
               </ul>
             </div>
           </div>
@@ -222,7 +219,7 @@ export default function Home() {
             <div className="feature-image">
               <Image
                 src="/assets/images/dbat-lubbock.jpg"
-                alt="D-BAT Lubbock batting and training facility"
+                alt="D-BAT Lubbock training facility"
                 width={1536}
                 height={1024}
               />
@@ -230,11 +227,10 @@ export default function Home() {
             <div className="feature-copy">
               <h3>D-BAT Lubbock</h3>
               <p>
-                A D-BAT franchise location in Lubbock, Texas offering private
-                instruction, team training, and batting cage rentals for youth
-                and amateur baseball and softball. Acquired and operated
-                directly with a focus on consistent quality, local growth, and
-                operational efficiency.
+                A D-BAT franchise location in Lubbock, Texas. Acquired and
+                operated directly. Current priorities include operational
+                efficiency, systems build-out, and service consistency
+                across all offerings.
               </p>
               <Link href="#contact" className="text-link">
                 Get in touch →
@@ -244,45 +240,30 @@ export default function Home() {
 
           <div className="portfolio-future">
             <div className="portfolio-future-header" data-reveal>
-              <h3>Looking Ahead</h3>
-              <p>Where capital and attention are directed.</p>
+              <h3>Current Focus</h3>
+              <p>Active priorities.</p>
             </div>
 
             <div className="pillars-grid">
               <div className="pillar" data-reveal>
                 <div className="pillar-icon" aria-hidden="true">
-                  <MapPinIcon />
+                  <BuildingIcon />
                 </div>
-                <h3>Franchise Expansion</h3>
-                <p>
-                  Evaluating additional D-BAT markets based on population
-                  density, site economics, and operational readiness. Capital
-                  committed only after criteria are met.
-                </p>
+                <h3>Expanding within existing operations</h3>
               </div>
 
               <div className="pillar" data-reveal data-delay="1">
                 <div className="pillar-icon" aria-hidden="true">
                   <CpuIcon />
                 </div>
-                <h3>Operational Infrastructure</h3>
-                <p>
-                  Building the scheduling, staffing, and customer data systems
-                  required to operate multiple units without adding management
-                  overhead.
-                </p>
+                <h3>Strengthening internal systems and reporting</h3>
               </div>
 
               <div className="pillar" data-reveal data-delay="2">
                 <div className="pillar-icon" aria-hidden="true">
-                  <StarIcon />
+                  <MapPinIcon />
                 </div>
-                <h3>Adjacent Acquisitions</h3>
-                <p>
-                  Reviewing acquisition targets in adjacent service industries
-                  with stable cash flow, defensible positioning, and strong
-                  operator alignment.
-                </p>
+                <h3>Evaluating new acquisition opportunities</h3>
               </div>
             </div>
           </div>
@@ -294,18 +275,15 @@ export default function Home() {
         <div className="container">
           <div className="section-intro" data-reveal>
             <h2 id="contact-heading">Get in touch.</h2>
-            <p>
-              We are open to discussions involving acquisitions, franchise
-              opportunities, partnerships, and aligned business inquiries.
-            </p>
+            <p>We review all inbound inquiries.</p>
           </div>
 
           <div className="contact-inner">
             <div className="contact-info" data-reveal>
               <h3>Reach out directly.</h3>
               <p>
-                Use the form for initial inquiries, or email us directly. We
-                respond to all qualified outreach within a few business days.
+                If you are exploring an acquisition, partnership, or strategic
+                opportunity, provide relevant detail so we can evaluate fit.
               </p>
 
               <div className="contact-details">

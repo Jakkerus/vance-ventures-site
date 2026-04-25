@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Vance Ventures",
-  description: "Building long term value through ownership and execution.",
+  description: "Private holding company focused on ownership, operations, and long-term value creation.",
   icons: {
     icon: [
       { url: "/assets/brand/fav-32.svg", type: "image/svg+xml" },
@@ -20,6 +20,26 @@ export const metadata: Metadata = {
       { url: "/assets/brand/fav-16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: "/assets/brand/apple-icon.png",
+  },
+  openGraph: {
+    title: "Vance Ventures",
+    description: "Private holding company focused on ownership, operations, and long-term value creation.",
+    type: "website",
+    url: "https://vance-ventures.com",
+    images: [
+      {
+        url: "https://vance-ventures.com/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Vance Ventures — Private Holding Company",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vance Ventures",
+    description: "Private holding company focused on ownership, operations, and long-term value creation.",
+    images: ["https://vance-ventures.com/opengraph-image"],
   },
 };
 
@@ -53,7 +73,7 @@ export default function RootLayout({
               <img
                 src="/assets/brand/monogram-circle-dark.svg"
                 alt="Vance Ventures"
-                height="40"
+                height="48"
                 style={{ width: "auto", display: "block" }}
               />
             </div>
