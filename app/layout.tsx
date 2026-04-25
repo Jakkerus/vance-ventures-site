@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     url: "https://vance-ventures.com",
     images: [
       {
-        url: "https://vance-ventures.com/opengraph-image",
+        url: "https://vance-ventures.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Vance Ventures — Private Holding Company",
+        alt: "Vance Ventures",
       },
     ],
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vance Ventures",
     description: "Private holding company focused on ownership, operations, and long-term value creation.",
-    images: ["https://vance-ventures.com/opengraph-image"],
+    images: ["https://vance-ventures.com/og-image.png"],
   },
 };
 
