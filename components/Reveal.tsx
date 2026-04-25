@@ -29,12 +29,12 @@ export default function Reveal() {
         // Already in view on load — skip animation
         return;
       }
-      const delay = el.dataset.delay ? parseInt(el.dataset.delay) * 80 : 0;
+      const delay = el.dataset.delay ? parseInt(el.dataset.delay) * 35 : 0;
       el.style.opacity = "0";
-      el.style.transform = "translateY(14px)";
+      el.style.transform = "translateY(8px)";
       el.style.transition = [
-        `opacity 0.45s cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
-        `transform 0.45s cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
+        `opacity 0.25s ease ${delay}ms`,
+        `transform 0.25s ease ${delay}ms`,
       ].join(", ");
       observer.observe(el);
     });

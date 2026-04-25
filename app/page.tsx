@@ -169,7 +169,7 @@ export default function Home() {
           <div className="portfolio-future">
             <div className="portfolio-future-header" data-reveal>
               <h3>Looking Ahead</h3>
-              <p>Strategic initiatives and areas of future focus.</p>
+              <p>Where capital and attention are directed.</p>
             </div>
 
             <div className="pillars-grid">
@@ -177,10 +177,11 @@ export default function Home() {
                 <div className="pillar-icon" aria-hidden="true">
                   <MapPinIcon />
                 </div>
-                <h3>Additional Locations</h3>
+                <h3>Franchise Expansion</h3>
                 <p>
-                  Exploring opportunities to expand within the D-BAT franchise
-                  system.
+                  Evaluating additional D-BAT markets based on population
+                  density, site economics, and operational readiness. Capital
+                  committed only after criteria are met.
                 </p>
               </div>
 
@@ -188,10 +189,11 @@ export default function Home() {
                 <div className="pillar-icon" aria-hidden="true">
                   <CpuIcon />
                 </div>
-                <h3>Technology and Tools</h3>
+                <h3>Operational Infrastructure</h3>
                 <p>
-                  Investing in technology and tools that improve operations and
-                  customer experience.
+                  Building the scheduling, staffing, and customer data systems
+                  required to operate multiple units without adding management
+                  overhead.
                 </p>
               </div>
 
@@ -199,10 +201,11 @@ export default function Home() {
                 <div className="pillar-icon" aria-hidden="true">
                   <StarIcon />
                 </div>
-                <h3>Strategic Ventures</h3>
+                <h3>Adjacent Acquisitions</h3>
                 <p>
-                  Evaluating strategic ventures that align with our long term
-                  goals and create lasting value.
+                  Reviewing acquisition targets in adjacent service industries
+                  with stable cash flow, defensible positioning, and strong
+                  operator alignment.
                 </p>
               </div>
             </div>
